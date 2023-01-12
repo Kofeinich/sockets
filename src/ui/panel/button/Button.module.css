@@ -1,0 +1,22 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 118px;
+    height: 32px;
+    border-radius: 5px;
+    padding: 10px 8px;
+    gap: 5px;
+    border: none;
+    background: linear-gradient(93.88deg, #2F98CF 51.56%, #2FCFB2 100%);
+    box-shadow: 2px 2px 8px rgba(37, 37, 37, 0.25);
+}
+
+.text {
+    color: #FFFFFF;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}

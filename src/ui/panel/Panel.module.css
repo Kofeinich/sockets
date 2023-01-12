@@ -1,0 +1,7 @@
+.panel {
+    display: flex;
+    justify-content: space-between;
+    width: 383px;
+    position: relative;
+    top: -30px;
+}
