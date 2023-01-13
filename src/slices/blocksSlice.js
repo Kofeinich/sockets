@@ -74,16 +74,13 @@ const blocksSlice = createSlice({
     },
     reducers: {
         updateFieldData(state, action) {
-            console.log(state, action) //checking
             state[action.payload.blockId].fields[action.payload.fieldId].fieldValue = action.payload.value
         },
         changeEnabled(state, action){
-            console.log(state, action) //checking
             state[action.payload.blockId].enabled = action.payload.nowEnabled
         },
         changeFieldStatus(state, action){
-            console.log(state, action) //checking
-            state[action.payload.blockId].fields[action.payload.fieldId].fieldReadonly = action.payload.nowReadonly
+            state[action.payload.blockId].fields[action.payload.fieldId].fieldReadonly = action.payload.readonly
         }
     }
 })

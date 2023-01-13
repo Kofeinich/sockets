@@ -6,7 +6,6 @@ import {useSelector} from "react-redux";
 export const Panel = () => {
     const config = useSelector((state) => state.blocks);
     let keys = Object.keys(config);
-    console.log(keys)
 
     return <section className={styles.panel}>
         {keys.map((item, index) => {
