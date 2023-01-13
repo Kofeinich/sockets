@@ -2,13 +2,17 @@ import styles from './Block.module.css'
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {updateFieldData} from "../../slices/blocksSlice";
+import {useSocketSubscribe} from "../../sockets/SocketSubscriber";
 
 export const Block = ({blockId}) => {
     const config = useSelector((state) => state.blocks[blockId]);
+
+    const sendMessage = useSocketSubscribe()
+
     let keys = Object.keys(config.fields);
     const dispatch = useDispatch()
 
-    return <section className={styles.block}>
+    return (config.enabled) ? <section className={styles.block}>
         <h2 className={styles.heading2}>{config.blockName}</h2>
         {keys.map((field, index)=> {
            return  <React.Fragment key={index}>
@@ -19,5 +23,5 @@ export const Block = ({blockId}) => {
                 }></input>
             </React.Fragment>
         })}
-    </section>
+    </section> : <></>
 }

@@ -79,11 +79,11 @@ const blocksSlice = createSlice({
         },
         changeEnabled(state, action){
             console.log(state, action) //checking
-            state[action.payload.blockId].enabled = action.payload.isEnabled
+            state[action.payload.blockId].enabled = action.payload.nowEnabled
         },
         changeFieldStatus(state, action){
             console.log(state, action) //checking
-            state[action.payload.blockId].fields[action.payload.fieldId].fieldReadonly = action.payload.isReadonly
+            state[action.payload.blockId].fields[action.payload.fieldId].fieldReadonly = action.payload.nowReadonly
         }
     }
 })
